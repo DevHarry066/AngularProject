@@ -1,0 +1,23 @@
+ul{
+  list-style: none;
+  min-height: 600px;
+  display:flex;
+}
+li{
+  padding: 20px;
+  margin: 20px;
+}
+.account-title {
+  padding: 20px 10px;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  vertical-align: top;
+  margin-bottom: 5px;
+  background-color: #f2f2f2;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;;
+  background-size: cover;
+}

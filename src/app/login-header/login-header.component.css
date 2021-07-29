@@ -1,0 +1,25 @@
+.navbar-style{
+  margin-bottom: 13px;
+  background: rgba(0, 0, 0, 0);
+  /* height: 13px; */
+  color: #383838;
+  padding-bottom: 13px;
+  background-color: rgba(242,242,242,1);
+  font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+}
+
+.topbar-text
+{
+  color: #383838;
+}
+
+.logo
+{
+  display: inline-block;
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+    padding: 30px;
+    margin: 20px;
+    border-bottom: 1px solid #ebebeb;
+}

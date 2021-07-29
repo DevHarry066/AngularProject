@@ -1,0 +1,33 @@
+<form [formGroup]="loginForm" #ngForm="ngForm" class="form-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        Login Form <span *ngIf="ngForm.submitted && !loginForm.valid" class="small-font"
+          [ngClass]="{'invalid': ngForm.submitted }">* required</span>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div>
+        <div class="col-md-6">
+          <mat-form-field class="full-width">
+            <input type="email" formControlName="email" matInput placeholder="Email">
+            <mat-hint style="color: red;" *ngIf="l.email.errors?.required && l.email.touched">Email is required</mat-hint>
+
+          </mat-form-field>
+        </div>
+      </div>
+        <div class="col-md-6">
+          <div>
+          <mat-form-field class="full-width">
+            <input type="password" formControlName="password" autocomplete="name" matInput placeholder="Password">
+            <mat-hint style="color: red;" *ngIf="l.password.errors?.required && l.password.touched">Password is required</mat-hint>
+          </mat-form-field>
+        </div> </div>
+  </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button (click)="saveLoginForm()" [disabled]="!loginForm.valid" mat-raised-button color="primary">Save</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

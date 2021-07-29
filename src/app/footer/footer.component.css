@@ -1,0 +1,38 @@
+.footer-title
+{
+
+ margin: 10px;
+  font-size: 20px;
+  text-align:center;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    display: block;
+}
+
+.footer-text
+{
+
+ margin: 10px;
+  text-align:center;
+  font-size: 14px;
+    display: block;
+    font-weight: 300;
+}
+ul{
+
+  margin: 10px;
+  list-style: none;
+  display: flex;
+}
+li{
+  padding: 10px;
+}
+
+.footer-top
+{
+  background-color: rgba(223,161,96,1);
+  text-align:center;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid brown;
+}

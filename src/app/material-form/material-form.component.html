@@ -1,0 +1,44 @@
+<form [formGroup]="profileForm" #ngForm="ngForm" class="form-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        Registration Form <span *ngIf="ngForm.submitted && !profileForm.valid" class="small-font"
+          [ngClass]="{'invalid': ngForm.submitted }">* required</span>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col-md-6">
+          <mat-form-field class="full-width">
+            <input formControlName="name" matInput placeholder="Name">
+            <mat-hint style="color: red;" *ngIf="f.name.errors?.required && f.name.touched">Name is required</mat-hint>
+
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field class="full-width">
+            <input type="email" formControlName="email" matInput placeholder="Email">
+            <mat-hint style="color: red;" *ngIf="f.email.errors?.required && f.email.touched">Email is required</mat-hint>
+          </mat-form-field>
+        </div>
+
+      <div class="col-md-4">
+        <mat-form-field class="full-width">
+          <input type="password" formControlName="password" autocomplete="name" matInput placeholder="Password">
+          <mat-hint style="color: red;" *ngIf="f.password.errors?.required && f.password.touched">Password is required</mat-hint>
+        </mat-form-field>
+      </div>
+
+    <div class="col-md-6">
+      <mat-form-field class="full-width">
+        <input formControlName="role" matInput placeholder="Role">
+        <mat-hint style="color: red;" *ngIf="f.role.errors?.required && f.role.touched">Role is required</mat-hint>
+      </mat-form-field>
+    </div>
+  </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button (click)="saveForm()" [disabled]="!profileForm.valid" mat-raised-button color="primary">Save</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
