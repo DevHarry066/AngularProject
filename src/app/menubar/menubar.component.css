@@ -1,0 +1,32 @@
+button
+{
+padding: 0;
+border: none;
+background: none;
+}
+
+ul{
+    margin: 0 0 24px 15px;
+    max-width:100px;
+
+  }
+  li{
+    text-align:center;
+    line-height:24px;
+    background-color:white;
+    list-style:none;
+  }
+
+  .buttonn
+  {
+    font-weight:600;
+    letter-spacing:0.8px;
+    font-size: 16px;
+  }
+
+.buttonn:active,
+.buttonn:focus,
+.buttonn:visited
+{
+  color:#8d88b4;
+}

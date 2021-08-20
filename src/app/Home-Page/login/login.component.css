@@ -1,12 +1,15 @@
-ul{
-  list-style: none;
-  min-height: 600px;
-  display:flex;
+.buttonn
+{
+  font-size: 14px;
 }
-li{
-  padding: 20px;
-  margin: 20px;
+
+.margin{
+  margin-left: 2%;
+  margin-right: 2%;
+
 }
+
+
 .account-title {
   padding: 20px 10px;
   display: inline-block;

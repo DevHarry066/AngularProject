@@ -33,8 +33,10 @@ data-backdrop="static" data-keyboard="false"
         <tr>
             <th>EmployeeId</th>
             <th>EmployeeName</th>
-            <th>Department</th>
             <th>DateOfJoining</th>
+            <th>Salary</th>
+            <th>Department Id</th>
+            <th>Department Name</th>
             <th>Options</th>
         </tr>
     </thead>
@@ -42,8 +44,10 @@ data-backdrop="static" data-keyboard="false"
         <tr *ngFor="let dataItem of EmployeeList">
             <td (click)="populateForm(dataItem)">{{dataItem.employeeId}}</td>
             <td (click)="populateForm(dataItem)">{{dataItem.employeeName}}</td>
-            <td (click)="populateForm(dataItem)">{{dataItem.department}}</td>
             <td (click)="populateForm(dataItem)">{{dataItem.dateOfJoining}}</td>
+            <td (click)="populateForm(dataItem)">{{dataItem.salary}}</td>
+            <td (click)="populateForm(dataItem)">{{dataItem.department.departmentId}}</td>
+            <td (click)="populateForm(dataItem)">{{dataItem.department.departmentName}}</td>
             <td>
 
 

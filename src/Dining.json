@@ -1,0 +1,22 @@
+[
+  {"imageUrl":"http://wordpress.templatemela.com/woo/WCM04/WCM040094/WP5/wp-content/uploads/2019/04/3-368x383.jpg",
+    "rating":4, "productName":"Combos with Hagen Lounge Chair","price":98,"discount":180,"percen":44},
+
+    {"imageUrl":"http://wordpress.templatemela.com/woo/WCM04/WCM040094/WP5/wp-content/uploads/2019/04/4-368x383.jpg",
+    "rating":3, "productName":"Evening Carnival Barcode Stinge Ruffle Set","price":70,"discount":0,"percen":0},
+
+    {"imageUrl":"http://wordpress.templatemela.com/woo/WCM04/WCM040094/WP5/wp-content/uploads/2019/04/5-368x383.jpg",
+      "rating":4, "productName":"Hatch Cylindrical Glass Accent Chair","price":110,"discount":0,"percen":0
+    },
+    {"imageUrl":"http://wordpress.templatemela.com/woo/WCM04/WCM040094/WP5/wp-content/uploads/2019/04/3-368x383.jpg",
+      "rating":2, "productName":"Jewel Champange Glass Vase","price":80,"discount":0,"percen":0
+    },
+
+    {"imageUrl":"http://wordpress.templatemela.com/woo/WCM04/WCM040094/WP5/wp-content/uploads/2019/04/4-368x383.jpg",
+      "rating":0, "productName":"Lounge & Accent Chair Brunette","price":98,"discount":0,"percen":0
+    },
+
+    {"imageUrl":"http://wordpress.templatemela.com/woo/WCM04/WCM040094/WP5/wp-content/uploads/2019/04/17-368x383.jpg",
+        "rating":3, "productName":"Stinker Solid Wood Dining Table","price":70,"discount":75,"percen":7
+    }
+]

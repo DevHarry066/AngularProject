@@ -1,3 +1,4 @@
+
 <form [formGroup]="loginForm" #ngForm="ngForm" class="form-container">
   <mat-card>
     <mat-card-header>
@@ -8,26 +9,25 @@
     </mat-card-header>
     <mat-card-content>
       <div class="row">
-        <div>
-        <div class="col-md-6">
+        <div class="u-column1 col-md-10">
           <mat-form-field class="full-width">
             <input type="email" formControlName="email" matInput placeholder="Email">
             <mat-hint style="color: red;" *ngIf="l.email.errors?.required && l.email.touched">Email is required</mat-hint>
-
           </mat-form-field>
         </div>
-      </div>
-        <div class="col-md-6">
-          <div>
+
+        <div class="u-column1 col-md-10">
           <mat-form-field class="full-width">
             <input type="password" formControlName="password" autocomplete="name" matInput placeholder="Password">
             <mat-hint style="color: red;" *ngIf="l.password.errors?.required && l.password.touched">Password is required</mat-hint>
           </mat-form-field>
-        </div> </div>
-  </div>
+        </div>
+      </div>
     </mat-card-content>
     <mat-card-actions>
-      <button (click)="saveLoginForm()" [disabled]="!loginForm.valid" mat-raised-button color="primary">Save</button>
+
+      <!-- [disabled]="!loginForm.valid" -->
+      <button (click)="saveLoginForm()"  mat-raised-button color="primary">Log In</button>
     </mat-card-actions>
   </mat-card>
 </form>

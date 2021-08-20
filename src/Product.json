@@ -1,0 +1,25 @@
+{
+  "products": {
+      "Cabinetery": [
+          {"imageUrl":"http://wordpress.templatemela.com/woo/WCM04/WCM040094/WP5/wp-content/uploads/2019/04/3-368x383.jpg",
+            "rating":4, "productName":"Chair","price":100,"discount":125,"percen":14},
+
+            {"imageUrl":"http://wordpress.templatemela.com/woo/WCM04/WCM040094/WP5/wp-content/uploads/2019/04/4-368x383.jpg",
+            "rating":3, "productName":"Stool","price":100,"discount":180,"percen":44},
+
+            {"imageUrl":"http://wordpress.templatemela.com/woo/WCM04/WCM040094/WP5/wp-content/uploads/2019/04/5-368x383.jpg",
+              "rating":4, "productName":"Table","price":100,"discount":113,"percen":10}
+      ],
+
+      "DiningSet": [
+        {"imageUrl":"http://wordpress.templatemela.com/woo/WCM04/WCM040094/WP5/wp-content/uploads/2019/04/3-368x383.jpg",
+          "rating":4, "productName":"Chair","price":100,"discount":125,"percen":14},
+
+          {"imageUrl":"http://wordpress.templatemela.com/woo/WCM04/WCM040094/WP5/wp-content/uploads/2019/04/4-368x383.jpg",
+          "rating":3, "productName":"Stool","price":100,"discount":180,"percen":44},
+
+          {"imageUrl":"http://wordpress.templatemela.com/woo/WCM04/WCM040094/WP5/wp-content/uploads/2019/04/5-368x383.jpg",
+            "rating":4, "productName":"Table","price":100,"discount":113,"percen":10}
+    ]
+  }
+}

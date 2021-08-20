@@ -24,6 +24,17 @@ import { LoginComponent } from './Home-Page/login/login.component';
 import { LoginHeaderComponent } from './login-header/login-header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SqrtPipe } from './SqrtPipe.components';
+import { HomeComponent } from './Home-Page/home/home.component';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ContactUsComponent } from './More/contact-us/contact-us.component';
+import { AboutUsComponent } from './More/about-us/about-us.component';
+import { StarRatingModule } from 'angular-star-rating';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MenubarComponent } from './menubar/menubar.component';
+import { ShopDetailsComponent } from './shop-details/shop-details.component';
+import { ShopComponent } from './shop-details/shop/shop.component';
+import { CartComponent } from './cart/cart.component';
+
 @NgModule({
   declarations: [
     SqrtPipe,
@@ -36,8 +47,16 @@ import { SqrtPipe } from './SqrtPipe.components';
     LoginComponent,
     LoginHeaderComponent,
     FooterComponent,
+    HomeComponent,
+    ContactUsComponent,
+    AboutUsComponent,
+    MenubarComponent,
+    ShopDetailsComponent,
+    ShopComponent,
+    CartComponent,
   ],
   imports: [
+    TooltipModule.forRoot(),
     BrowserModule,
     MatButtonModule,
     BrowserAnimationsModule,
@@ -54,7 +73,9 @@ import { SqrtPipe } from './SqrtPipe.components';
     MatCardModule,
     MatButtonModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    StarRatingModule,
+    MatNativeDateModule,
+    NgbModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [SharedService],

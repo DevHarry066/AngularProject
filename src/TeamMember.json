@@ -1,0 +1,47 @@
+[
+  {
+    "image":"http://wordpress.templatemela.com/woo/WCM04/WCM040094/WP5/wp-content/uploads/2019/01/S1-600x600_t.jpg",
+    "name":"Nimo Enimson",
+    "role":"Manager",
+    "info":"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur ma…",
+    "icon1":"fa fa-twitter",
+    "icon2":"fa fa-facebook",
+    "icon3":"fa fa-google-plus",
+    "icon4":"fa fa-linkedin",
+    "icon5":"fa fa-youtube"
+  },
+  {
+    "image":"http://wordpress.templatemela.com/woo/WCM04/WCM040094/WP5/wp-content/uploads/2019/01/S2-600x600_t.jpg",
+    "name":"Monica Patel",
+    "role":"CEO",
+    "info":"Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. …",
+    "icon1":"fa fa-youtube",
+    "icon2":"fa fa-rss",
+    "icon3":"fa fa-pinterest",
+    "icon4":"fa fa-skype",
+    "icon5":""
+  },
+  {
+    "image":"http://wordpress.templatemela.com/woo/WCM04/WCM040094/WP5/wp-content/uploads/2019/01/S3-600x600_t.jpg",
+    "name":"Vilorano Jeo",
+    "role":"Designer",
+    "info":"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to…",
+    "icon1":"fa fa-link",
+    "icon2":"fa fa-mail",
+    "icon3":"fa fa-twitter",
+    "icon4":"fa fa-facebook",
+    "icon5":"fa fa-skype"
+  },
+  {
+    "image":"http://wordpress.templatemela.com/woo/WCM04/WCM040094/WP5/wp-content/uploads/2019/01/S4-600x600_t.jpg",
+    "name":"Reema Anderson",
+    "role":"Developer",
+    "info":"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliqu…",
+    "icon1":"fa fa-link",
+    "icon2":"fa fa-facebook",
+    "icon3":"fa fa-twitter",
+    "icon4":"fa fa-linkedin",
+    "icon5":"fa fa-pinterest"
+  }
+
+]

@@ -1,0 +1,193 @@
+.account-title {
+  padding: 20px 10px;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  vertical-align: top;
+  margin-bottom: 5px;
+  background-color: #f2f2f2;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;;
+  background-size: cover;
+}
+
+.text
+{
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-size: 34px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 40px;
+  padding: 5px;
+}
+
+.text-inside
+{
+  font-size: 15px;
+  color: #838383;
+  font-weight: 300;
+}
+
+a{
+  font-size: 15px;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+}
+
+a:hover
+{
+  color: #DFA160;
+}
+
+.text-block
+{
+  margin-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.text-title
+{
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+  color: #000000;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  line-height: 24px;
+
+}
+
+.text-content
+{
+  /* padding: 0 60px; */
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #838383;
+  line-height: 24px;
+
+}
+
+.image-style
+{
+  height: 270px;
+  width: 270px;
+}
+
+@media only screen and (max-width: 500px)
+{
+.image-style
+{
+  height: 375px;
+  width: 375px;
+}
+}
+
+.Deal
+{
+  font-size: 20px;
+  font-weight: 600;
+  /* padding: 18px 0; */
+  padding-left: 18px;
+  font-family: 'Popins';
+  position: relative;
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 4px;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 500px)
+{
+.Deal
+{
+  text-align: center;
+}
+}
+
+.role
+{
+  font-size: 16px;
+  text-align: center;
+}
+
+
+.icon
+{
+  margin: 0 10px 0 0;
+  color: #bcbcbc;
+  font-size: 18px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  width: 30px;
+}
+
+.heading{
+  padding: 1px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.content12
+{
+  font-size: 13px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #838383;
+}
+.texttitle1
+{
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.role{
+  color: #DFA160;
+}
+.member-info
+{
+  padding: 0 30px;
+  font-size: 17px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.box
+{
+  border: 2px solid #ededed;
+}
+
+.quote
+{
+  padding: 60px 0 50px;
+
+}
+
+.quote-content
+{
+  font-size: 16px;
+  color: #838383;
+  line-height: 26px;
+  text-align: center;
+  margin: 20px auto;
+  width: 72%;
+  font-style: italic;
+}
+
+.quote-icon
+{
+  position: center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  height: 52px;
+  width: 5%;
+  margin: auto;
+  padding: 10px 0;
+
+}

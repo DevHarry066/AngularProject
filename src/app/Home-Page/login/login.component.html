@@ -1,21 +1,29 @@
 <app-login-header></app-login-header>
 
-<nav class="nav">
-  </nav>
+<nav class="navbar navbar-expand-sm navbar-dark">
+  <ul class="navbar-nav">
+      <li class="nav-item offset-xl-10">
+          <button routerLink="home"
+          class="m-1 btn btn-light btn-outline-primary active buttonn" Button (click)="onHome()">Home</button>
+      </li>
+  </ul>
+</nav>
+
+
 
 <div class="account-title">
   <h1>{{title}}</h1>
   <h4>Home / Account </h4>
-
-  <!-- Pipes -->
-    <!-- Square root of 625 is {{625|sqrt}} -->
-    <!-- <h1>{{title|uppercase}}</h1> -->
-
-
 </div>
-<ul>
- <li><app-log-in></app-log-in></li>
-<li><app-material-form></app-material-form></li>
-</ul>
 
+
+<div class="row margin">
+  <div class="col-md-6 container-fluid my-5">
+    <app-log-in></app-log-in>
+  </div>
+
+  <div class="col-md-6 container-fluid my-5 pb-5">
+    <app-material-form></app-material-form>
+  </div>
+</div>
 <app-footer></app-footer>

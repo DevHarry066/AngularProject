@@ -1,0 +1,140 @@
+<app-login-header></app-login-header>
+<app-menubar></app-menubar>
+<div class="account-title">
+  <div class="text">
+    <h1>About Us</h1>
+    <div class="text-inside">
+      <a href="/home" >Home</a>
+      / About Us
+    </div>
+  </div>
+</div>
+
+<div class="text-block">
+  <div class="text-title">
+    If you wanted get model, how would you do it?
+  </div>
+  <div class="text-content px-lg-5 px-sm-0">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type
+    specimen book. It has survived not only five centuries.
+  </div>
+</div>
+
+<div class="row image-box mx-lg-5 pb-5 px-lg-5 pl-4">
+  <div class="col-md-3 px-lg-5 pt-lg-0 pb-3">
+    <div class="image1" title="
+    4-street-style-trends-from-copenhagen-fashion-week">
+    <a href="about">
+    <img class="image-style"
+        src="http://wordpress.templatemela.com/woo/WCM04/WCM040094/WP5/wp-content/uploads/2019/04/4-street-style-trends-from-copenhagen-fashion-week-1024x564.jpg"
+        alt="about-image">
+      </a>
+    </div>
+  </div>
+  <div class="col-md-3 px-lg-5 pb-3">
+    <div class="image2" title="colors-are-important-for-healthy-better-happier-life">
+      <a href="about">
+      <img class="image-style"
+        src="http://wordpress.templatemela.com/woo/WCM04/WCM040094/WP5/wp-content/uploads/2019/04/colors-are-important-for-healthy-better-happier-life-1024x564.jpg"
+        alt="about-image">
+      </a>
+    </div>
+  </div>
+
+  <div class="col-md-3 px-lg-5 pb-3">
+    <div class="image3" title="daily-adventures-of-life">
+    <a href="about">
+      <img class="image-style"
+        src="http://wordpress.templatemela.com/woo/WCM04/WCM040094/WP5/wp-content/uploads/2019/04/daily-adventures-of-life-1024x564.jpg"
+        alt="about-image">
+        </a>
+    </div>
+  </div>
+  <div class="col-md-3 px-lg-5 pb-3">
+    <div class="image4" title="every-story-i-create-creates-me-i-write-to-create-myself">
+      <a href="about">
+      <img class="image-style"
+        src="http://wordpress.templatemela.com/woo/WCM04/WCM040094/WP5/wp-content/uploads/2019/04/every-story-i-create-creates-me-i-write-to-create-myself-1024x564.jpg"
+        alt="about-image">
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="Deal ml-lg-5">MEGNOR HISTORY</div>
+
+<div class="row mx-lg-5 mt-5 px-3">
+  <div *ngFor="let m of megss" class="col-md-4">
+  <div id="1" class="col-md-12 pb-5">
+    <div class="d-flex">
+    <div class="icon">
+      <i [class]="m.icon"></i>
+    </div>
+    <div class="heading">
+      <a href="about">
+        {{m.heading}}
+      </a>
+    </div>
+  </div>
+    <div class="content12">
+      {{m.content}}
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="Deal ml-lg-5">OUR TEAM MEMBER</div>
+
+<div class="row px-lg--5 mx-lg-5 pt-2 pb-5 mb-5">
+  <div class="col-md-3" *ngFor="let member of teams">
+  <div class="col-md-12">
+    <div>
+      <img [src]="member.image" class="image-style" alt="photo">
+    </div>
+    <div class="box">
+    <div class="texttitle1">
+      <a href="about">
+      {{member.name}}
+    </a>
+    </div>
+    <div class="role">
+      {{member.role}}
+    </div>
+    <div class="member-info text-content">
+      {{member.info}}
+    </div>
+    <div class="icon mx-5 px-5 d-flex">
+    <i class="px-2" [ngClass]="member.icon1"></i>
+    <i class="px-2" [class]="member.icon2"></i>
+    <i class="px-2" [class]="member.icon3"></i>
+    <i class="px-2" [class]="member.icon4"></i>
+    <i class="px-2" [class]="member.icon5"></i>
+  </div>
+</div>
+
+  </div>
+</div>
+</div>
+
+<div class="quote">
+  <div class="quote-icon">
+    <img class="" style="background-position: center;" src="http://wordpress.templatemela.com/woo/WCM04/WCM040094/WP5/wp-content/themes/shopvolly/images/megnor/quote.png">
+
+  </div>
+  <div class="mt-5 quote-content">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and…
+  </div>
+  <div class="quote-name text-title">
+    MR. Reema CYRUS
+  </div>
+  <div class="role">
+    Financial Manager
+  </div>
+
+</div>
+
+
+<app-footer></app-footer>

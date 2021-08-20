@@ -1,0 +1,242 @@
+<!-- <p>shop-details works!</p> -->
+<app-login-header></app-login-header>
+<app-menubar></app-menubar>
+
+<div class="account-title">
+  <div class="text">
+    <h1></h1>
+    <div class="text text-inside">
+      <a href="/home" >Home</a>
+      / {{title}}
+    </div>
+  </div>
+</div>
+
+
+<div class="row pl-lg-5 ml-lg-5">
+  <div *ngFor="let pd of details" class="col-md-12 pt-5">
+
+    <div class="col-md-5">
+      <!-- images -->
+      <img role="presentation" class="productImage " [src]="pd.imageUrl" alt="Product Image">
+
+      <div  class="row small-images pt-2 pb-2 pl-5">
+        <div class="image1 col-md-3 py-2">
+          <img [src]="pd.image2">
+        </div>
+
+        <div class="image1 col-md-3 py-2">
+          <img [src]="pd.image3">
+        </div>
+
+        <div class="image1 col-md-3 py-2">
+          <img [src]="pd.image4">
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="col-md-7 pl-lg-0 ml-4 ml-lg-0">
+      <!-- name and price  -->
+      <div class="product-name">
+        {{pd.name}}
+      </div>
+      <div class="rating">
+        <div class="stars" title="Rated 3.00 out of 5">
+          <!-- star-rating -->
+          <ng-template #t let-fill="fill">
+            <span class="star" [class.full]="fill === 100">
+              <span class="half" [style.width.%]="fill"><i class="fa fa-star"></i></span>
+              <i class="fa fa-star"></i>
+            </span>
+          </ng-template>
+          <ngb-rating [max]="5" [rate]="pd.rating" [starTemplate]="t" [readonly]="true">
+          </ngb-rating>
+          </div>
+      </div>
+
+      <div class="d-flex rate">
+        <div class="price">
+          ${{pd.price}}.00
+        </div>
+        <div class="discount">
+          <s>${{pd.discount}}.00</s>
+        </div>
+      </div>
+
+      <div class="info">
+        {{pd.info}}
+      </div>
+
+      <div class="d-flex">
+        <form class="cart" action="#" method="POST">
+          <div class="quantity">
+            <span class="qty">QTY:</span>
+            <input type="number" step="1" min="1" max name="quantity" value="1" class="input-quantity"
+            size="4" pattern="[0-9]*" inputmode="numeric">
+            <button type="submit" class="add-to-cart">Add to cart</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="d-flex">
+      <div class="add-to-wishlist">
+        <i class="fa fa-heart"></i>
+        <span class="wish">
+          Add To Wishlist
+        </span>
+      </div>
+
+      <div class="add-to-wishlist">
+        <i class="fa fas fa-area-chart"></i>
+        <span class="wish">
+          Compare
+        </span>
+      </div>
+    </div>
+
+      <div class="extra-info">
+
+      <div class="d-flex">
+        <div class="categories">SKU: </div>
+        <div class="content">{{pd.SKU}}</div>
+      </div>
+
+      <div class="d-flex">
+        <div class="categories">Categories:</div>
+        <div class="content">{{pd.categories}}</div>
+      </div>
+
+      <div class="d-flex">
+        <div class="categories">Tag:</div>
+        <div class="content">{{pd.tag}}</div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+<div>
+
+<div class="d-flex buttonn ml-lg-5 pl-lg-5 my-2 my-lg-3 py-2 py-lg-3">
+  <div class="description px-3">
+  <button type="submit" class="add-to-cart" (click)="onDescription()">DESCRIPTION</button>
+  </div>
+
+  <div class="description px-3">
+    <button type="submit" class="add-to-cart" (click)="onInfo()">ADDITIONAL INFORMATION</button>
+  </div>
+</div>
+
+<div *ngIf="value==1" class="mt-5">
+  <div class="block-content mx-5">
+    <div class="block-title">
+      Paragraph text
+    </div>
+    <div class="block-text">
+      Nam tristique porta ligula, vel viverra sem eleifend nec. Nulla sed purus augue, eu euismod tellus. Nam mattis eros nec mi sagittis sagittis. Vestibulum suscipit cursus bibendum. Integer at justo eget sem auctor auctor eget vitae arcu. Nam tempor malesuada porttitor. Nulla quis dignissim ipsum. Aliquam pulvinar iaculis justo, sit amet interdum sem hendrerit vitae. Vivamus vel erat tortor. Nulla facilisi. In nulla quam, lacinia eu aliquam ac, aliquam in nisl.
+    </div>
+
+    <div class="un-list">
+      <div class="block-title">Unordered list</div>
+      <ul>
+      <div class="block-text">
+      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+      <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore.</li>
+      <li>Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+      <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, eligendi.</li>
+      <li>Lorem ipsum dolor sit amet.</li>
+      </div>
+    </ul>
+    </div>
+
+    <div class="un-list">
+      <div class="block-title">Unordered list</div>
+      <ol>
+      <div class="block-text">
+      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+      <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore.</li>
+      <li>Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+      <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, eligendi.</li>
+      <li>Lorem ipsum dolor sit amet.</li>
+      </div>
+    </ol>
+    </div>
+
+    <div class="block-text">
+      In cursus faucibus tortor eu vestibulum. Ut eget turpis ac justo porta varius. Donec vel felis ante, ac vehicula ipsum. Quisque sed diam metus. Quisque eget leo sit amet erat varius rutrum vitae dapibus lectus. Vivamus et sapien ante. Suspendisse potenti. Fusce in tellus est, ac consequat lacus. Nulla risus massa, commodo in imperdiet ut, ornare in leo. Duis pellentesque sagittis lorem, sed mollis lorem venenatis id.
+    </div>
+  </div>
+</div>
+</div>
+<br>
+<br>
+
+<div *ngIf="value==2" class="mx-lg-5 px-lg-5 mb-5 pb-4">
+  <div class="add-info mx-lg-5">
+    <table>
+      <tbody>
+        <tr>
+          <th class="weight">
+            Weight
+          </th>
+          <th class="value">
+            15 KG
+          </th>
+        </tr>
+        <tr>
+          <th class="dimensions">Dimensions</th>
+          <th class="value">124 × 451 × 215 cm</th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="Deal mx-5 px-5">RELATED PRODUCTS</div>
+
+<div class="row flex-row py-5 mr-lg-5 mb-5">
+
+  <div *ngFor="let r of relates" class="container-fluid col-9 col-sm-6 col-md-6 col-lg-2 pb-5">
+    <div class="col-12 col-sm-12 col-lg-12 px-lg-2 pt-5 pb-5">
+      <a href="#">
+        <img width="270" height="300" [src]="r.imageUrl" alt="chair">
+      </a>
+      <span>
+        <div class="stars" title="Rated 3.00 out of 5">
+      <!-- star-rating -->
+      <ng-template #t let-fill="fill">
+        <span class="star" [class.full]="fill === 100">
+          <span class="half" [style.width.%]="fill"><i class="fa fa-star"></i></span>
+          <i class="fa fa-star"></i>
+        </span>
+      </ng-template>
+      <ngb-rating [max]="5" [rate]="r.rating" [starTemplate]="t" [readonly]="true">
+      </ngb-rating>
+      </div>
+      </span>
+
+      <a href="#">
+        <h3 class="product-name">
+          {{r.productName}}
+        </h3>
+      </a>
+      <div class="price">
+        <span class="real-price">
+          ${{r.price}}.00
+        </span>
+        <span class="dis-price">
+          <s>${{r.discount}}.00</s>
+        </span>
+        <span class="percen">
+          {{r.percen}}%
+        </span>
+      </div>
+    </div>
+    </div>
+  </div>
+
+
+<app-footer></app-footer>

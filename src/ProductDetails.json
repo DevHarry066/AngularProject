@@ -1,0 +1,17 @@
+[
+  {
+    "imageUrl":"http://wordpress.templatemela.com/woo/WCM04/WCM040094/WP5/wp-content/uploads/2019/04/8.jpg",
+    "name":"Arcade Dining Chair- With Arms",
+    "rating":5,
+    "price":100,
+    "discount":180,
+    "info":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip commodo consequat.",
+    "quantity":1,
+    "SKU":"NHFL3",
+    "categories":"Kitchen Cabinet",
+    "tag":"Furniture",
+    "image2":"http://wordpress.templatemela.com/woo/WCM04/WCM040094/WP5/wp-content/uploads/2019/04/9-100x100.jpg",
+    "image3":"http://wordpress.templatemela.com/woo/WCM04/WCM040094/WP5/wp-content/uploads/2019/04/5-100x100.jpg",
+    "image4":"http://wordpress.templatemela.com/woo/WCM04/WCM040094/WP5/wp-content/uploads/2019/04/17-100x100.jpg"
+  }
+]
