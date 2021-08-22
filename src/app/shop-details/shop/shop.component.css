@@ -122,7 +122,7 @@ a:hover
 
 .pagination-1
 {
-  margin: 0 15px;
+  margin: 4px 20px;
   color: #838383;
   font-size: 13px;
 }
@@ -140,6 +140,39 @@ a:hover
   margin-left: auto;
 
 }
+@media only screen and (max-width: 600px) {
+.toolbar, .pagination-1
+{
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  margin-left: 15%;
+  padding: 15px 0;
+  display: block;
+}
+}
+
+@media only screen and (max-width: 600px) {
+
+.list-grid
+{
+  display: none;
+}
+}
+
+@media only screen and (max-width: 600px) {
+  .sorting-div
+  {
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    margin-left: 14%;
+    display: block;
+  padding: 15px 0;
+  }
+  }
+
+
 
 select
 {
@@ -244,12 +277,19 @@ h3{
 
 .cat-image
 {
-    width: 225px;
-    height: 230px;
-    border-radius: 5%;
-
+    width: 240px;
+    height: 250px;
+    border-radius: 5px;
 }
 
+@media only screen and (max-width: 600px) {
+
+.cat-image
+{
+    width: 320px;
+    height: 332px;
+}
+}
 .content-block
 {
   padding-left:30px;
