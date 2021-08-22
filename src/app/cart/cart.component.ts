@@ -1,5 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import cartData from 'src/Cart.json';
 
+interface Cart
+{
+  imageUrl:string,
+  productName:string,
+  price:number,
+  quantity:number,
+  subTotal:number
+}
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -13,5 +22,6 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     this.title="Cart";
   }
+  carts:Cart[]=cartData;
 
 }

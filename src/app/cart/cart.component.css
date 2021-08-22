@@ -31,13 +31,147 @@
 }
 
 a{
-  font-size: 15px;
+  font-size: 13px;
   text-decoration: none;
   color: #000000;
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 
 a:hover
 {
   color: #DFA160;
+}
+
+.cart-table
+{
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 0.8px;
+  color: #838383;
+}
+
+table ,td,th{
+  border: 1px solid black;
+}
+table
+{
+  min-width: 90%;
+}
+/*
+@media only screen and (max-width:500px)
+{
+  .table-form {
+    max-width: 200px;
+  }
+} */
+@media only screen and (max-width: 500px)
+{
+  .table-form
+  {
+    max-width: 200px;
+    margin-left: 3px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+
+thead{
+  background-color: #f2f2f2;
+}
+
+tr{
+  border-spacing: 2px;
+}
+
+td,th
+{
+  border-color: #ebebeb;
+  color: #000000;
+  padding: 5px 10px;
+}
+
+.price
+{
+  font-weight: 600;
+  font-size: 12px;
+  color: #8d88b4;
+}
+
+.subTotal
+{
+  color: #838383;
+  font-size: 13px;
+}
+
+.qty
+{
+  line-height: 45px;
+  font-size: 13px;
+  margin-right: 5px;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-weight: 550;
+  color: #000;
+}
+
+.input-quantity
+{
+  border: 1px solid #ebebeb;
+  width: 54px;
+  height: 45px;
+  padding: 8px;
+  /* margin: 0 3px; */
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #000000;
+}
+
+.cart-image
+{
+  height:52px;
+  width:52px;
+}
+
+.input-text {
+  float: left;
+  box-sizing: border-box;
+  border: 1px solid #ebebeb;
+  margin: 0 5px 0 0;
+  outline: 0;
+  padding: 8px 10px;
+  line-height: 24px;
+}
+
+button
+{
+  background-color: rgba(141,136,180,1);
+    color: #FFFFFF;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    padding: 12px 24px 10px;
+    text-align: center;
+    font-size: 12px;
+    border:none;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 1px;
+    border-radius: 50px;
+}
+
+button:hover{
+  background-color: #DFA160;
+}
+
+
+.Deal
+{
+  font-size: 20px;
+  font-weight: 700;
+  padding-left: 18px;
+  text-align: center;
+  font-family: 'Popins';
+  position: relative;
+  /* border-bottom: 1px solid #ededed; */
+  padding-bottom: 4px;
+  text-transform: uppercase;
 }

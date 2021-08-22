@@ -13,9 +13,9 @@
 </div>
 
 
-<div class="cart-table">
-  <form>
-    <table>
+<div class="cart-table my-lg-5 px-lg-5 mx-lg-5">
+  <form class="table-form">
+    <table >
       <thead>
         <tr>
           <th></th>
@@ -27,17 +27,67 @@
         </tr>
       </thead>
       <tbody>
+        <tr *ngFor="let c of carts">
+          <td>×</td>
+          <td>
+            <a href="">
+              <img class="cart-image" [src]="c.imageUrl" alt=cartProduct>
+            </a>
+          </td>
+          <td ><a href="#">{{c.productName}}</a></td>
+          <td class="price">${{c.price}}.00</td>
+          <td><span class="qty">QTY:</span>
+            <input type="number" step="1" min="1" max name="quantity" value="1" class="input-quantity"
+            size="4" pattern="[0-9]*" inputmode="numeric">
+            </td>
+          <td class="subTotal">${{c.subTotal}}.00</td>
+        </tr>
+
         <tr>
-          <td>remove</td>
-          <td>image</td>
-          <td>productName</td>
-          <td>price</td>
-          <td>QTY:</td>
-          <td>$100.00</td>
+          <td colspan="6">
+          <div class="coupon">
+            <input type="text" class="input-text" placeholder="Coupon code">
+            <button type="submit" class="button">Apply Coupon</button>
+          </div>
+        </td>
         </tr>
       </tbody>
     </table>
   </form>
 </div>
+<!--
+<div class="Deal">
+  CART TOTALS
+</div>
+
+<div class="add-info mx-lg-5">
+  <table>
+    <tbody>
+      <tr>
+        <th class="weight">
+          Subtotal
+        </th>
+        <th class="value">
+          {{carts.subTotal}
+        </th>
+      </tr>
+      <tr>
+        <th class="dimensions">Dimensions</th>
+        <th class="value">124 × 451 × 215 cm</th>
+      </tr>
+      <tr>
+        <th class="weight">
+          Weight
+        </th>
+        <th class="value">
+          15 KG
+        </th>
+      </tr>
+
+    </tbody>
+  </table>
+</div> -->
+
+
 
 <app-footer></app-footer>
