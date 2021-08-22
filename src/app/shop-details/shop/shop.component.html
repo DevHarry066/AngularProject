@@ -13,7 +13,7 @@
   </div>
 </div>
 
-<div class="row mt-5">
+<div class="row my-5">
   <div class="col-md-3">
     <div class="categories">
       <div class="product-list">
@@ -62,16 +62,16 @@
       </div>
     </div>
   </div>
-  <div class="col-md-9 pr-lg-5">
+  <div class="col-md-9 pr-lg-5 my-3 my-lg-0 px-3 px-lg-3">
     <p class="content-text">
       There are many variations of passages of Loren Gypsum available, but the majority have suffered alteration in some form, by injected humor, or randomized words which don’t look even slightly believable. If you are going to use a passage of Loren Gypsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text.
     </p>
     <div class="toolbar d-flex">
       <nav class="list-grid">
         <a href="#"></a>
-        <i class="fa grid-i fa-th"></i>
+        <i class="fa grid-i fa-th mx-3"></i>
         <a href="#"></a>
-        <i class="fa grid-i-ul fa-list-ul"></i>
+        <i class="fa grid-i-ul fa-list-ul mx-3"></i>
       </nav>
       <p class="pagination-1">Showing 1–12 of 18 results</p>
       <div class="sorting-div">
@@ -87,6 +87,44 @@
     </div>
 
     <div class="products">
+      <div *ngFor="let ps of products" class="col-md-4">
+        <div id="" class="pl-lg-0 col-lg-12 pl-5 pt-5 col-12 col-md-12">
+          <div class="">
+            <span class="pl-5 pl-lg-0">
+              <a href="#" class="">
+                <img class="cat-image" [src]="ps.imageUrl" alt="">
+              </a>
+            </span>
+            <div class="content-block px-lg-0 px-5">
+              <span>
+               <div class="stars" title="Rated 3.00 out of 5">
+
+                <ng-template #t let-fill="fill">
+                  <span class="star" [class.full]="fill === 100">
+                    <span class="half" [style.width.%]="fill"><i class="fa fa-star"></i></span><i class="fa fa-star"></i>
+                  </span>
+                </ng-template>
+
+
+                <ngb-rating [max]="5" [rate]="ps.rating" [starTemplate]="t" [readonly]="true">
+                </ngb-rating>
+                </div>
+              </span>
+                <a href="#">
+                  <h3 class="product-name">
+                    {{ps.productName}}
+                  </h3>
+                </a>
+                <div class="price">
+                  <span class="real-price">
+                    ${{ps.price}}.00
+                  </span>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
 
     </div>
   </div>
