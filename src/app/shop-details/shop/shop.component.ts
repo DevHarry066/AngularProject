@@ -17,13 +17,16 @@ interface Product
 })
 export class ShopComponent implements OnInit {
 
+  p:any;
   title:any;
   constructor() { }
 
   ngOnInit(): void {
     this.title="Shop";
+    // this.p=1;
   }
 
   products:Product[]=productData;
+
 
 }

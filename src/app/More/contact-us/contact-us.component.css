@@ -65,8 +65,11 @@ a:hover
 .contact-form
 {
   padding: 10px 0px 0px;
+  margin-right: 75%;
   margin: 0 70px;
   box-sizing: border-box;
+  flex-wrap: wrap;
+
 }
 .contact-form-inside
 {
@@ -83,10 +86,25 @@ a:hover
 background-color: #f2f2f2;
 
 }
-@media only screen and (max-width: 979px)
+@media only screen and (max-width: 600px)
 {.contactform {
-  margin-left: 10px;
+  max-width: 407px;
+  padding: 50px 10px;
+  margin-left: 4px;
+  border-radius: 5px;
 }}
+
+@media only screen and (max-width: 600px)
+{
+  .right-side-box
+  {
+  max-width: 407px;
+padding: 50px 50px;
+margin-top: 30px;
+margin-left: 100%;
+border-radius: 5px;
+}
+}
 
 .name
 {
@@ -132,6 +150,7 @@ button
   margin-top: 10px;
   background-color: rgba(141,136,180,1);
   color: #FFFFFF;
+  border:none;
   line-height: 20px;
   text-align: center;
   font-size: 12px;

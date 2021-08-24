@@ -1,6 +1,7 @@
 import { SharedService } from './shared.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgxPaginationModule } from 'ngx-pagination';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -58,6 +59,7 @@ import { CartComponent } from './cart/cart.component';
   imports: [
     TooltipModule.forRoot(),
     BrowserModule,
+    NgxPaginationModule,
     MatButtonModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
@@ -76,7 +78,7 @@ import { CartComponent } from './cart/cart.component';
     StarRatingModule,
     MatNativeDateModule,
     NgbModule
-  ],
+    ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [SharedService],
   bootstrap: [AppComponent]

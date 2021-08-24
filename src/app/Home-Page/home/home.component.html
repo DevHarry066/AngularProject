@@ -90,10 +90,10 @@
         <span class="real-price">
           ${{d.price}}.00
         </span>
-        <span class="dis-price">
+        <span *ngIf="d.discount>0" class="dis-price">
           <s>${{d.discount}}.00</s>
         </span>
-        <span class="percen">
+        <span *ngIf="d.percen>0" class="percen">
           {{d.percen}}%
         </span>
       </div>

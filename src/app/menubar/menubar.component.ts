@@ -11,6 +11,12 @@ export class MenubarComponent implements OnInit {
 
   constructor(private router:Router) { }
 
+  navbarOpen = false;
+
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
+
+  }
   ngOnInit(): void {
   }
   onHome()

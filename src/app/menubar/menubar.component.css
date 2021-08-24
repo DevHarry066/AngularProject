@@ -30,3 +30,28 @@ ul{
 {
   color:#8d88b4;
 }
+
+
+.nav-style
+{
+  width: 20%;
+}
+@media only screen and (max-width: 500px)
+{
+  .nav-style
+  {
+    background-color:grey;
+  }
+}
+
+.color1
+{
+  background-color: #dfa160;
+
+}
+
+.color2
+{
+  background-color: pink;
+
+}
