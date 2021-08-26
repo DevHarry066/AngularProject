@@ -90,10 +90,10 @@
       <!-- <div *ngFor="let ps of products | paginate: {itemPerPage:10, currentPage:p, totalItems: p}" class="col-md-4"> -->
       <div *ngFor="let ps of products" class="col-md-4">
 
-        <div id="" class="pl-lg-0 col-lg-12 pl-0 pt-5 col-12 col-md-12">
+        <div id="" class="pl-lg-0 col-lg-12 pb-5 pl-0 pt-5 col-12 col-md-12">
           <div class="">
             <span class="pl-5 pl-lg-0">
-              <a href="#" class="">
+              <a href="http://localhost:4200/shopDetails" class="">
                 <img class="cat-image" [src]="ps.imageUrl" alt="">
               </a>
             </span>
@@ -132,6 +132,6 @@
   </div>
 </div>
 
-<pagination-controls (pageChange)="p=$event"></pagination-controls>
+<!-- <pagination-controls (pageChange)="p=$event"></pagination-controls> -->
 
 <app-footer></app-footer>
