@@ -65,7 +65,7 @@
   <div *ngFor="let d of deals" class="container-fluid col-9 col-sm-6 col-md-6 col-lg-2">
     <div class="col-12 col-sm-12 col-lg-12 px-lg-2 pt-5 pb-5">
       <a href="#">
-        <img width="270" height="300" [src]="d.imageUrl" alt="chair">
+        <img width="270" height="300" [src]='d.imageUrl' alt="chair">
       </a>
       <span>
         <div class="stars" title="Rated 3.00 out of 5">
@@ -93,8 +93,8 @@
         <span *ngIf="d.discount>0" class="dis-price">
           <s>${{d.discount}}.00</s>
         </span>
-        <span *ngIf="d.percen>0" class="percen">
-          {{d.percen}}%
+        <span *ngIf="d.percentage>0" class="percen">
+          {{d.percentage}}%
         </span>
       </div>
     </div>

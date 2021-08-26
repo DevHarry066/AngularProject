@@ -1,6 +1,6 @@
 import { Input,Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { EcommerceService } from 'src/app/ecommerce.service';
 import cabData from 'src/Cabinetery.json';
 import diningData from 'src/Dining.json';
 import dealData from 'src/DealOfTheDay.json';
@@ -20,9 +20,18 @@ interface Deal{
   productName: string;
   price: number;
   discount: number;
-  percen: number;
+  percentage: number;
 }
 
+
+interface Deal1{
+  imageUrl: string;
+  rating: number;
+  productName: string;
+  price: number;
+  discount: number;
+  percen: number;
+}
 
 @Component({
   selector: 'app-home',
@@ -34,17 +43,31 @@ interface Deal{
 export class HomeComponent implements OnInit {
   cabss1:Cabinetery[]=cabData;
   dinss:Cabinetery[]=diningData;
-  deals:Deal[]=dealData;
-  sellers:Deal[]=sellerData;
+  deals!:Deal[];
+  sellers:Deal1[]=sellerData;
 
-  constructor(private router:Router) {
+  constructor(private router:Router, private service:EcommerceService) {
 }
 
 
   ngOnInit(): void {
+    this.refreshProductList();
+  }
 
+  refreshProductList(){
+    this.service.getDealOfDayList().subscribe(data=>{
+    this.deals=data;
+    this.dealsUpdater();
+    });
 
   }
+
+   dealsUpdater = () => {
+    for (let i = 0; i < this.deals.length; i++) {
+      this.deals[i].imageUrl="https://localhost:44389"+ this.deals[i].imageUrl;
+    }
+  }
+
   onHome()
   {
     this.router.navigate(['/home']);
