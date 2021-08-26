@@ -93,7 +93,7 @@
         <div id="" class="pl-lg-0 col-lg-12 pb-5 pl-0 pt-5 col-12 col-md-12">
           <div class="">
             <span class="pl-5 pl-lg-0">
-              <a href="http://localhost:4200/shopDetails" class="">
+              <a routerLink="/shopDetails" class="" (click)="onSpecificProduct(ps.id)">
                 <img class="cat-image" [src]="ps.imageUrl" alt="">
               </a>
             </span>
