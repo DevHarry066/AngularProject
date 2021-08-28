@@ -7,30 +7,31 @@
     <h1></h1>
     <div class="text text-inside">
       <a href="/home" >Home</a>
-      / {{title}}
+      / {{details.productName}}
     </div>
   </div>
 </div>
 
 
 <div class="row pl-lg-5 ml-lg-5">
-  <div *ngFor="let pd of details" class="col-md-12 pt-5">
+  <!-- <div *ngFor="let pd of details" class="col-md-12 pt-5"> -->
+    <div class="col-md-12 pt-5">
 
     <div class="col-md-5">
       <!-- images -->
-      <img role="presentation" class="productImage " [src]="pd.imageUrl" alt="Product Image">
+      <img role="presentation" class="productImage " [src]="details.imageUrl" alt="Product Image">
 
       <div  class="row small-images pt-2 pb-2 pl-5">
         <div class="image1 col-md-3 py-2">
-          <img [src]="pd.image2">
+          <!-- <img [src]="pd.image2"> -->
         </div>
 
         <div class="image1 col-md-3 py-2">
-          <img [src]="pd.image3">
+          <!-- <img [src]="pd.image3"> -->
         </div>
 
         <div class="image1 col-md-3 py-2">
-          <img [src]="pd.image4">
+          <!-- <img [src]="pd.image4"> -->
         </div>
       </div>
     </div>
@@ -40,7 +41,7 @@
     <div class="col-md-7 pl-lg-0 ml-4 ml-lg-0">
       <!-- name and price  -->
       <div class="product-name">
-        {{pd.name}}
+        {{details.productName}}
       </div>
       <div class="rating">
         <div class="stars" title="Rated 3.00 out of 5">
@@ -51,22 +52,22 @@
               <i class="fa fa-star"></i>
             </span>
           </ng-template>
-          <ngb-rating [max]="5" [rate]="pd.rating" [starTemplate]="t" [readonly]="true">
+          <ngb-rating [max]="5" [rate]="details.rating" [starTemplate]="t" [readonly]="true">
           </ngb-rating>
           </div>
       </div>
 
       <div class="d-flex rate">
         <div class="price">
-          ${{pd.price}}.00
+          ${{details.price}}.00
         </div>
         <div class="discount">
-          <s>${{pd.discount}}.00</s>
+          <s>${{details.discount}}.00</s>
         </div>
       </div>
 
       <div class="info">
-        {{pd.info}}
+        {{details.details}}
       </div>
 
       <div class="d-flex">
@@ -100,17 +101,17 @@
 
       <div class="d-flex">
         <div class="categories">SKU: </div>
-        <div class="content">{{pd.SKU}}</div>
+        <div class="content">{{details.sku}}</div>
       </div>
 
       <div class="d-flex">
         <div class="categories">Categories:</div>
-        <div class="content">{{pd.categories}}</div>
+        <div class="content">{{details.categories}}</div>
       </div>
 
       <div class="d-flex">
         <div class="categories">Tag:</div>
-        <div class="content">{{pd.tag}}</div>
+        <div class="content">{{details.tag}}</div>
       </div>
     </div>
   </div>
@@ -219,7 +220,7 @@
       </span>
 
       <a href="#">
-        <h3 class="product-name">
+        <h3 class="product-name1">
           {{r.productName}}
         </h3>
       </a>

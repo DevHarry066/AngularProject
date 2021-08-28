@@ -1,13 +1,13 @@
 // import { dealData } from 'src/DealOfTheDay.json';
 
 import { Component, OnInit } from '@angular/core';
-
+import { EcommerceService } from '../ecommerce.service';
 import prodData from 'src/ProductDetails.json';
 import dealData from 'src/DealOfTheDay.json';
 interface Product
 {
   imageUrl:string,
-    name:string,
+  ProductName:string,
     rating:number,
     price:number,
     discount:number,
@@ -15,10 +15,10 @@ interface Product
     quantity:number,
     SKU:string,
     categories:string,
-    tag:string,
-    image2:string,
-    image3:string,
-    image4:string
+    tag:string
+    // image2:string,
+    // image3:string,
+    // image4:string
 }
 interface Deal{
   imageUrl: string;
@@ -38,16 +38,22 @@ interface Deal{
 export class ShopDetailsComponent implements OnInit {
 
   title:any;
-  constructor() { }
+  constructor(private service:EcommerceService) {
+
+    // this.refreshList();
+   }
   value:any;
+  index:any;
 
 
   ngOnInit(): void {
     this.title="Arcade Dining Chair- With Arms";
     this.value=2;
+    this.index=2;
+    this.refreshList();
   }
 
-details:Product[]=prodData;
+details:any;
 relates:Deal[]=dealData;
 
 onDescription()
@@ -55,8 +61,26 @@ onDescription()
   this.value=1;
 }
 
-onInfo()
-{
-  this.value=2;
-}
-}
+   refreshList()
+   {
+    this.service.getProductDetails().subscribe(data => {
+      this.details = data;
+      console.log(this.details);
+      this.detailsUpdater();
+    });
+   }
+
+   detailsUpdater = () => {
+      this.details.imageUrl = "https://localhost:44389"+this.details.imageUrl;
+    }
+    // console.log(this.details);
+
+    onInfo()
+    {
+      this.value=2;
+    }
+
+  }
+
+
+

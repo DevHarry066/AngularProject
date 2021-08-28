@@ -1,8 +1,9 @@
+import { ShopDetailsComponent } from './../shop-details.component';
+import { EcommerceService } from 'src/app/ecommerce.service';
 import { Component, OnInit } from '@angular/core';
-import productData from 'src/ShopProducts.json';
-
 interface Product
 {
+  id:number,
   imageUrl: string;
   rating: number;
   productName: string;
@@ -19,14 +20,40 @@ export class ShopComponent implements OnInit {
 
   p:any;
   title:any;
-  constructor() { }
+  productId!:number;
+  constructor( private service:EcommerceService) { }
 
   ngOnInit(): void {
     this.title="Shop";
-    // this.p=1;
+    this.refreshProductList();
+    }
+
+  products!:Product[];
+
+  refreshProductList(){
+    this.service.getProductList().subscribe(data=>{
+    this.products=data;
+    this.productsUpdater();
+    });
   }
 
-  products:Product[]=productData;
+  productsUpdater = () => {
+    for (let i = 0; i < this.products.length; i++) {
+      this.products[i].imageUrl="https://localhost:44389"+this.products[i].imageUrl;
+    }
+  }
 
+
+  onSpecificProduct(data:number)
+  {
+    this.productId=data;
+    console.log("Product Id is "+this.productId);
+
+    this.service.setId(this.productId).subscribe(data=>{
+      this.products=data;
+      console.log("After Service "+ this.productId);
+      // this.productsUpdater();
+      });
+  }
 
 }

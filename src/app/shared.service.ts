@@ -64,4 +64,9 @@ export class SharedService {
     return this.http.get<any[]>(this.url+'/Login?email='+val.email+'&password='+val.password);
   }
 
+  addUserMessage(data:any)
+  {
+    return this.http.post(this.url+'/api/Form',data);
+  }
+
 }

@@ -26,20 +26,20 @@
     <div class="contactform">
 
     <div class="row ml-0 pl-0">
-      <form>
+      <form [formGroup]="profileForm" #ngForm="ngForm">
         <div class="col-lg-6">
           <div class="form1">
             <div class="name">
               <label>Your Name (required)</label><br>
-              <input type="text">
+              <input type="text" formControlName="name">
             </div>
             <div class="name">
               <label>Your Email (required)</label><br>
-              <input type="text">
+              <input type="text" formControlName="email">
             </div>
             <div class="name">
               <label>Subject</label><br>
-              <input type="text">
+              <input type="text" formControlName="subject">
             </div>
           </div>
         </div>
@@ -47,11 +47,11 @@
         <div class="col-lg-6">
           <div class="name">
             <label>Your Message</label><br>
-            <textarea type="text"></textarea>
+            <textarea type="text" formControlName="message"></textarea>
           </div>
         </div>
 
-        <button (click)="sendDetails()" class="ml-5">Send</button>
+        <button (click)="sendDetails()" (click)="saveForm()" class="ml-5">Send</button>
 
       </form>
     </div>

@@ -6,6 +6,7 @@ import diningData from 'src/Dining.json';
 import dealData from 'src/DealOfTheDay.json';
 import sellerData from 'src/BestSellerItems.json';
 interface Cabinetery{
+id:any;
   imageUrl: string;
   rating: number;
   productName: string;
@@ -15,6 +16,7 @@ interface Cabinetery{
 }
 
 interface Deal{
+  id:any;
   imageUrl: string;
   rating: number;
   productName: string;
@@ -41,57 +43,111 @@ interface Deal1{
 
 
 export class HomeComponent implements OnInit {
-  cabss1:Cabinetery[]=cabData;
-  dinss:Cabinetery[]=diningData;
-  deals!:Deal[];
-  sellers:Deal1[]=sellerData;
+  cabss1!: Cabinetery[];
+  dinss!: Cabinetery[];
+  deals!: Deal[];
+  sellers!: Deal[];
+  cat!:string;
+  productId:any;
 
-  constructor(private router:Router, private service:EcommerceService) {
-}
+  constructor(private router: Router, private service: EcommerceService) {
+    this.cat="cabinetery";
+  }
 
 
   ngOnInit(): void {
     this.refreshProductList();
   }
 
-  refreshProductList(){
-    this.service.getDealOfDayList().subscribe(data=>{
-    this.deals=data;
-    this.dealsUpdater();
+  refreshProductList() {
+
+
+    this.service.getDealOfDayList().subscribe(data => {
+      this.deals = data;
+      this.dealsUpdater();
     });
 
+    this.service.getBestSellerList().subscribe(data => {
+      this.sellers = data;
+      this.sellersUpdater();
+    });
+
+    this.getCategoriesList();
+
+
+
   }
 
-   dealsUpdater = () => {
-    for (let i = 0; i < this.deals.length; i++) {
-      this.deals[i].imageUrl="https://localhost:44389"+ this.deals[i].imageUrl;
-    }
-  }
 
-  onHome()
-  {
+
+
+  onHome() {
     this.router.navigate(['/home']);
   }
 
-  onContact()
-  {
+  onContact() {
     this.router.navigate(['/contact']);
   }
 
-  onAbout()
-  {
+  onAbout() {
     this.router.navigate(['/about']);
   }
 
 
 
- cabinetery()
+  // cabinetery() {
+  //   this.cat="cabinetery";
+  //   this.getCategoriesList();
+  //   }
+  //   diningSet() {
+  //     this.cat="diningSet";
+  //     this.getCategoriesList();
+  //     this.cabss1=this.dinss;
+  // }
+  getProductsByCategory(data:string)
   {
-    this.cabss1=cabData;
+    this.cat=data;
   }
 
-  diningSet()
+  getCategoriesList()
   {
-    this.cabss1=this.dinss;
+    this.service.getProductCategory(this.cat).subscribe(data => {
+      this.cabss1 = data;
+      this.cabsUpdater();
+    });
+
   }
+
+  onSpecificProduct(data:number)
+  {
+    this.productId=data;
+    console.log("Product Id is "+this.productId);
+
+    this.service.setId(this.productId).subscribe(data=>{
+      this.productId=data;
+      console.log("After Service "+ this.productId);
+      // this.productsUpdater();
+      });
+  }
+
+
+
+
+dealsUpdater = () => {
+  for (let i = 0; i < this.deals.length; i++) {
+    this.deals[i].imageUrl = "https://localhost:44389" + this.deals[i].imageUrl;
+  }
+}
+
+sellersUpdater = () => {
+  for (let i = 0; i < this.sellers.length; i++) {
+    this.sellers[i].imageUrl = "https://localhost:44389" + this.sellers[i].imageUrl;
+    }
+}
+
+cabsUpdater = () => {
+  for (let i = 0; i < this.sellers.length; i++) {
+    this.cabss1[i].imageUrl = "https://localhost:44389" + this.cabss1[i].imageUrl
+  }
+}
 }
