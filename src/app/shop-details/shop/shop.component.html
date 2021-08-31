@@ -87,8 +87,8 @@
     </div>
 
     <div class="products">
-      <!-- <div *ngFor="let ps of products | paginate: {itemPerPage:10, currentPage:p, totalItems: p}" class="col-md-4"> -->
-      <div *ngFor="let ps of products" class="col-md-4">
+      <div *ngFor="let ps of products | paginate: { itemsPerPage:6 , currentPage:p}" class="col-md-4">
+      <!-- <div *ngFor="let ps of products" class="col-md-4"> -->
 
         <div id="" class="pl-lg-0 col-lg-12 pb-5 pl-0 pt-5 col-12 col-md-12">
           <div class="">
@@ -125,13 +125,15 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="pagination-div justify-content-center">
+<pagination-controls [responsive]="true" (pageChange)="p=$event"></pagination-controls>
+</div>
 
       </div>
 
     </div>
   </div>
-</div>
 
-<!-- <pagination-controls (pageChange)="p=$event"></pagination-controls> -->
 
 <app-footer></app-footer>

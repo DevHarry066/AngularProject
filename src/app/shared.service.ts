@@ -66,7 +66,7 @@ export class SharedService {
 
   addUserMessage(data:any)
   {
-    return this.http.post(this.url+'/api/Form',data);
+    return this.http.post(this.url+'/api/ContactForm',data);
   }
 
 }

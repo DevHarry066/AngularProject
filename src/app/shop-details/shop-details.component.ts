@@ -1,25 +1,10 @@
 // import { dealData } from 'src/DealOfTheDay.json';
-
+import { Product } from '../product';
 import { Component, OnInit } from '@angular/core';
 import { EcommerceService } from '../ecommerce.service';
 import prodData from 'src/ProductDetails.json';
 import dealData from 'src/DealOfTheDay.json';
-interface Product
-{
-  imageUrl:string,
-  ProductName:string,
-    rating:number,
-    price:number,
-    discount:number,
-    info:string,
-    quantity:number,
-    SKU:string,
-    categories:string,
-    tag:string
-    // image2:string,
-    // image3:string,
-    // image4:string
-}
+
 interface Deal{
   imageUrl: string;
   rating: number;
@@ -39,11 +24,9 @@ export class ShopDetailsComponent implements OnInit {
 
   title:any;
   constructor(private service:EcommerceService) {
-
-    // this.refreshList();
    }
-  value:any;
-  index:any;
+  value!:number;
+  index!:number;
 
 
   ngOnInit(): void {
@@ -53,7 +36,7 @@ export class ShopDetailsComponent implements OnInit {
     this.refreshList();
   }
 
-details:any;
+details!:Product;
 relates:Deal[]=dealData;
 
 onDescription()
@@ -63,7 +46,7 @@ onDescription()
 
    refreshList()
    {
-    this.service.getProductDetails().subscribe(data => {
+    this.service.getProductDetailsById().subscribe(data => {
       this.details = data;
       console.log(this.details);
       this.detailsUpdater();
@@ -73,14 +56,9 @@ onDescription()
    detailsUpdater = () => {
       this.details.imageUrl = "https://localhost:44389"+this.details.imageUrl;
     }
-    // console.log(this.details);
 
     onInfo()
     {
       this.value=2;
     }
-
   }
-
-
-

@@ -9,39 +9,37 @@ import { SharedService } from 'src/app/shared.service';
 })
 export class ContactUsComponent implements OnInit {
 
-  constructor(private formBuilder:FormBuilder, public service:SharedService) { }
+  constructor(private formBuilder: FormBuilder, public service: SharedService) { }
 
   ngOnInit(): void {
   }
 
-  Data:any;
+  Data!: FormData;
 
   profileForm = this.formBuilder.group({
-    name:['',Validators.required],
-    email:['',Validators.required],
-    subject:['',Validators.required],
-    message:['',Validators.required],
-   });
+    name: ['', Validators.required],
+    email: ['', Validators.required],
+    subject: ['', Validators.required],
+    message: ['', Validators.required],
+  });
 
-   saveForm(){
+  saveForm() {
     console.log('Form data is ', this.profileForm.value);
-    this.Data=this.profileForm.value;
-    console.log("Hello from this data "+this.Data);
+    this.Data = this.profileForm.value;
+    console.log("Hello from this data " + this.Data);
     this.getData();
 
-    this.service.addUserMessage(this.Data).subscribe(res=>{
-       alert(res.toString());
-     });
-    }
+    this.service.addUserMessage(this.Data).subscribe(res => {
+      alert(res.toString());
+    });
+  }
 
-getData()
-{
+  getData() {
 
-  console.log(this.Data);
-}
+    console.log(this.Data);
+  }
 
-  sendDetails()
-  {
+  sendDetails() {
     console.log("Hii from Send Details");
 
   }
