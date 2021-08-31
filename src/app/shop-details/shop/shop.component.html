@@ -73,7 +73,7 @@
         <a href="#"></a>
         <i class="fa grid-i-ul fa-list-ul mx-3"></i>
       </nav>
-      <p class="pagination-1">Showing 1–12 of 18 results</p>
+      <p class="pagination-1">Showing {{pageSize}} of 18 results</p>
       <div class="sorting-div">
       <form class="sorting">
         <select class="options ">
@@ -87,7 +87,7 @@
     </div>
 
     <div class="products">
-      <div *ngFor="let ps of products | paginate: { itemsPerPage:6 , currentPage:p}" class="col-md-4">
+      <div *ngFor="let ps of products | paginate: { itemsPerPage:pageSize , currentPage:p}" class="col-md-4">
       <!-- <div *ngFor="let ps of products" class="col-md-4"> -->
 
         <div id="" class="pl-lg-0 col-lg-12 pb-5 pl-0 pt-5 col-12 col-md-12">
@@ -127,7 +127,7 @@
       </div>
     </div>
     <div class="pagination-div justify-content-center">
-<pagination-controls [responsive]="true" (pageChange)="p=$event"></pagination-controls>
+<pagination-controls (pageChange)="p=$event"></pagination-controls>
 </div>
 
       </div>

@@ -36,7 +36,7 @@ export class ShopDetailsComponent implements OnInit {
     this.refreshList();
   }
 
-details!:Product;
+details:any;
 relates:Deal[]=dealData;
 
 onDescription()
@@ -48,7 +48,7 @@ onDescription()
    {
     this.service.getProductDetailsById().subscribe(data => {
       this.details = data;
-      console.log(this.details);
+      // console.log(this.details);
       this.detailsUpdater();
     });
    }

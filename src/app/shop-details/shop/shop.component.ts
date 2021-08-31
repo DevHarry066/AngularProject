@@ -13,13 +13,13 @@ export class ShopComponent implements OnInit {
 
   p:any;
   title!:string;
-  productId!:number;
+  productId:any;
   pageSize!:number;
   constructor( private service:EcommerceService) { }
 
   ngOnInit(): void {
     this.title="Shop";
-    this.pageSize=10;
+    this.pageSize=6;
     this.refreshProductList();
     }
 
@@ -47,7 +47,7 @@ export class ShopComponent implements OnInit {
 
     this.service.setId(this.productId).subscribe(data=>{
       this.prod=data;
-      console.log("After Service "+ this.productId);
+      console.log("After Service "+ this.prod);
       });
   }
 

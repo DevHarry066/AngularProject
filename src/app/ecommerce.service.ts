@@ -19,11 +19,10 @@ export class EcommerceService {
   }
 
 
-  setId(data:number):Observable<any>
+  setId(data:any):Observable<any>
   {
     this.productId=data;
    console.log("set product Id as "+ this.productId);
-
     return this.productId;
   }
 
