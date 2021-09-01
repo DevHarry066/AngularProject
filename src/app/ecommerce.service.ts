@@ -27,11 +27,11 @@ export class EcommerceService {
   }
 
   getDealOfDayList(): Observable<Product[]> {
-    return this.http.get<Product[]> (this.url+'/api/DealBestSeller');
+    return this.http.get<Product[]> (this.url+'/api/DealBestSeller/GetDeal');
 }
 
 getBestSellerList(): Observable<Product[]> {
-  return this.http.get<Product[]> (this.url+'/api/DealBestSeller/GetBestSeller');
+  return this.http.get<Product[]> (this.url+'/api/BestSellerItems/GetBestSellerDeal');
 }
 
 getProductList(): Observable<Product[]> {
