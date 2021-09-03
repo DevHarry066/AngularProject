@@ -1,9 +1,10 @@
+import { AddToCart } from './../add-to-cart';
 // import { dealData } from 'src/DealOfTheDay.json';
 import { Product } from '../product';
 import { Component, OnInit } from '@angular/core';
 import { EcommerceService } from '../ecommerce.service';
-import prodData from 'src/ProductDetails.json';
 import dealData from 'src/DealOfTheDay.json';
+
 
 interface Deal{
   imageUrl: string;
@@ -27,6 +28,10 @@ export class ShopDetailsComponent implements OnInit {
    }
   value!:number;
   index!:number;
+  quantity!:number;
+  cartId!:string;
+  message=new AddToCart();
+
 
 
   ngOnInit(): void {
@@ -34,6 +39,7 @@ export class ShopDetailsComponent implements OnInit {
     this.value=2;
     this.index=2;
     this.refreshList();
+    this.quantity=1;
   }
 
 details:any;
@@ -61,4 +67,25 @@ onDescription()
     {
       this.value=2;
     }
-  }
+
+    addToCart(id:any)
+    {
+      // console.log("add to cart product id "+id);
+      // console.log("Quantity" +this.quantity);
+      // console.log(this.cartId="FDE323");
+      this.message.productId=id;
+      this.message.quantity=this.quantity;
+      this.message.cartId=this.cartId;
+      this.addCartIntoDatabase();
+      // console.log("Hello "+this.message.quantity);
+    }
+
+    addCartIntoDatabase()
+    {
+      this.service.addCart(this.message).subscribe(data=>{
+      });
+      alert("Added into cart");
+    }
+
+
+    }

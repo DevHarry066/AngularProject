@@ -28,7 +28,7 @@
       </thead>
       <tbody>
         <tr *ngFor="let c of carts">
-          <td>×</td>
+          <td><a routerLink="/cart" (click)="onDelete(c.id)">×</a></td>
           <td>
             <a href="">
               <img class="cart-image" [src]="c.imageUrl" alt=cartProduct>

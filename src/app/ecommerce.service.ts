@@ -1,3 +1,4 @@
+import { AddToCart } from './add-to-cart';
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {BehaviorSubject, Observable} from 'rxjs';
@@ -27,7 +28,7 @@ export class EcommerceService {
   }
 
   getDealOfDayList(): Observable<Product[]> {
-    return this.http.get<Product[]> (this.url+'/api/DealBestSeller/GetDeal');
+    return this.http.get<Product[]> (this.url+'/api/DealBestSeller');
 }
 
 getBestSellerList(): Observable<Product[]> {
@@ -44,6 +45,22 @@ getProductDetailsById(): Observable<Product> {
 
 getProductCategory(data:string): Observable<Product[]> {
   return this.http.get<Product[]>(this.url+'/api/Categories/FindEmployee?category='+data);
+}
+
+getCartList():Observable<any>
+{
+  return this.http.get<any>(this.url+'/api/ShoppingCart');
+}
+
+deleteCartItem(data:any)
+{
+  console.log("id in method of service" +data)
+  return this.http.delete(this.url+'/api/ShoppingCart/'+data);
+}
+
+addCart(postData:AddToCart):Observable<string>
+{
+  return this.http.post<string>(this.url+"/api/ShoppingCart",postData);
 }
 
 }

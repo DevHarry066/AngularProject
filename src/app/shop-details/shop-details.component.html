@@ -75,8 +75,8 @@
           <div class="quantity">
             <span class="qty">QTY:</span>
             <input type="number" step="1" min="1" max name="quantity" value="1" class="input-quantity"
-            size="4" pattern="[0-9]*" inputmode="numeric">
-            <button type="submit" class="add-to-cart">Add to cart</button>
+            size="4" [(ngModel)]="quantity" pattern="[0-9]*" inputmode="numeric">
+            <button type="submit" class="add-to-cart" (click)="addToCart(details.id)">Add to cart</button>
           </div>
         </form>
       </div>
