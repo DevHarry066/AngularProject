@@ -1,4 +1,6 @@
 import { TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
+import { RouterOutlet } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
@@ -6,7 +8,7 @@ describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule.withRoutes([])
       ],
       declarations: [
         AppComponent
@@ -26,10 +28,11 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('angularEmployee');
   });
 
-  it('should render title', () => {
+  it('should have a router-outlet', ()=>
+  {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('angularEmployee app is running!');
+    let de=fixture.debugElement.query(By.directive(RouterOutlet));
+    expect(de).not.toBeNull();
+
   });
 });
